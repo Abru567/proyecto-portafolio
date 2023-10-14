@@ -1,0 +1,43 @@
+#logo{
+  height: 2cm;
+}
+img{
+  background-color: #153a2e;
+  
+}
+h1{ text-align: center ;
+  font-size: 1cm;
+  color: aliceblue;
+  font-family: inherit;
+  display: inline-block;
+}
+header{ 
+  padding-left: 13cm;
+  margin-top: -0.5cm;
+  background-color:#00704A ;
+  margin-right:-35.70cm ;
+  border-bottom-style: groove;
+}
+main{
+  background-color: beige;
+  margin-top: -1cm;
+  margin-right:-35.60cm ;
+}
+#palabras{
+  display: inline-block;                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                           ;
+  font-size: larger;  
+}
+
+h2{
+  text-align: center;
+  ;
+}
+div{
+  background-color: #f0d8ac;
+  border-style: groove;
+}
+footer{
+  text-align: right;
+  margin-right:-35cm ;  
+}
+
