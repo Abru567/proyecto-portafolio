@@ -1,6 +1,6 @@
 
-import productos from "../components/productos.json"
+import productos from "./productos.json"
 export async function Productos() {
-    const data = await productos.json();
+    const data = productos;
     return data
 }
