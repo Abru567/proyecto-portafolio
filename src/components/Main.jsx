@@ -6,11 +6,17 @@ export default function Main() {
     const [producto, setProductos] = useState([])
     useEffect(() => (
         Productos().then(data => (
-            setProductos(data)
+            console.log(data)
+            // setProductos(data)
         ))
     )
         , [])
     return (
-        <></>
+        <div>{
+            producto.map(Productos =>
+                <p>{Productos.tipo}</p>
+            )
+        }
+        </div>
     )
 }
