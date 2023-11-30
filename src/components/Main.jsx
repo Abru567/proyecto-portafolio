@@ -6,8 +6,7 @@ export default function Main() {
     const [producto, setProductos] = useState([])
     useEffect(() => (
         Productos().then(data => (
-            console.log(data)
-            //setProductos(data)
+            setProductos(data)
         ))
     )
         , [])
