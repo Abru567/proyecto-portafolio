@@ -1,9 +1,9 @@
 import './App.css'
 import Navbar from './components/Navbar'
-import Main from './components/Main'
+import Main from './components/Main.1'
 import Footer from './components/Footer'
 import { BrowserRouter, Route,  Routes, Router} from 'react-router-dom'
-import { Productos } from './components/servicios/productos'
+import './components/servicios/productos'
 function App() {
 
   return (
@@ -12,12 +12,11 @@ function App() {
       <Main>
         <Router>
           <Routes>
-            <Route exact path={'/'} element={<Productos/>} >
-            </Route>
+            <Route path='/' element={<productos/>}/>
           </Routes>
         </Router>
       </Main>
-      <Footer />
+      <Footer/>
     </BrowserRouter>
   )
 }

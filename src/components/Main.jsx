@@ -8,9 +8,7 @@ export default function Main() {
         Productos().then(data => (
             console.log(data)
             // setProductos(data)
-        ))
-    )
-        , [])
+        ))))
     return (
         <div>{
             producto.map(Productos =>
