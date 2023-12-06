@@ -1,20 +1,15 @@
-
-import { useEffect, useState } from 'react'
 import '../App.css'
-import { Productos } from './servicios/productos'
+import { productos } from './servicios/productos'
 export default function Main() {
-    const [producto, setProductos] = useState([])
-    useEffect(() => (
-        Productos().then(data => (
-            console.log(data)
-            // setProductos(data)
-        ))))
+    const{data,loading}=productos;
     return (
-        <div>{
-            producto.map(Productos =>
-                <p>{Productos.tipo}</p>
-            )
-        }
-        </div>
-    )
+     <div>{
+        <ul>
+         {loading && <li>loading...</li>}   
+        {data?.map((user)=> (<li key={user.main}>{user.main}</li>))}
+        {data?.map((user)=> (<li key={user.main}>{user.main}</li>))}
+        {data?.map((user)=> (<li key={user.main}>{user.main}</li>))}
+        </ul>
+        }</div>
+        )
 }
