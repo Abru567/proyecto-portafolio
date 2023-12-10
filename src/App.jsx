@@ -7,16 +7,17 @@ function App() {
 
   return (
     <BrowserRouter >
-      <Navbar />
-      <Main>
-        <Router>
-          <Routes>
-            <Route path='/' element={<productos/>}/>
-          </Routes>
-        </Router>
-      </Main>
-      <Footer/>
-    </BrowserRouter>
+    <Navbar />
+    <Main>
+      <Router>
+        <Routes>
+          <Route path='/menu' element={<productos/>}/>
+        </Routes>
+      </Router>
+    </Main>
+    <Footer/>
+  </BrowserRouter>
+
   )
 }
 
