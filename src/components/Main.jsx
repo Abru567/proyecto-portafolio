@@ -1,12 +1,12 @@
-import Axios from 'axios';
-import productos from './servicios/productos.json'
-import { Suspense } from 'react';
 
+import '../App.css'
 export default function Main() {
-
+const express = import ('express')
+const app = express();
+const port = 3000;
   // Obtener un elemento específico por ID (sustituye <id> con el ID deseado)
-  const jsonData = [
-
+    const jsonData = [
+      
     {
       "id": "1",
       "titulo": "bebidas",
@@ -18,7 +18,7 @@ export default function Main() {
       "img": "https://djftrby1k8irl.cloudfront.net/s3fs-public/2022-03%2FIced%20Caramel%20Macchiato%20425x425%20sin%20fondo_0.png?auto=format,compress&q=70&crop=focalpoint&ar=1:1.0&w=180&fit=crop",
       "tipo": "Cafe helado"
     },
-    {
+      {
       "id": "3",
       "img": "https://djftrby1k8irl.cloudfront.net/s3fs-public/2022-03%2FDulce%20de%20leche%20Frapp%20425x425%20sin%20fondo.png?auto=format,compress&q=70&crop=focalpoint&ar=1:1.0&w=180&fit=crop",
       "tipo": "Frappuccino"
@@ -33,7 +33,7 @@ export default function Main() {
       "img": "https://djftrby1k8irl.cloudfront.net/s3fs-public/2022-03%2FTe%20Verde%20Frutilla%20425x425%20sin%20fondo.png?auto=format,compress&q=70&crop=focalpoint&ar=1:1.0&w=180&fit=crop",
       "tipo": "Te helado"
     },
-    {
+      {
       "id": "6",
       "img": "https://djftrby1k8irl.cloudfront.net/s3fs-public/2022-03%2FMango%20Dragonfruit%20sin%20fondo.png?auto=format,compress&q=70&crop=focalpoint&ar=1:1.0&w=180&fit=crop",
       "tipo": "Heladas"
@@ -71,20 +71,11 @@ export default function Main() {
       "tipo": "Te"
     },  // ...
   ];
-
-  // Obtener una lista de todos los valores de 'id'
-  const ids = jsonData.map(item => (item));
-  console.log(ids);
-
-
-
-
-  return (
-    <div>
-      <Suspense fallback={<div>loading...</div>}>
-        <ul>
-          {ids?.map((user) => { <li key={user.id}>{user}</li> })};
-        </ul>
-      </Suspense>
-    </div>)
-}
+  
+  app.get('/api/json', (req, res) => {
+    res.json(jsonData);
+  });
+  
+  app.listen(port, () => {
+    console.log(`Servidor escuchando en http://localhost:${port}`);
+  });}
