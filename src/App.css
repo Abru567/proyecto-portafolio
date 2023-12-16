@@ -3,22 +3,22 @@
 }
 img{
   background-color: #153a2e;
-  
+   
 }
-h1{ text-align: center ;
+h1{text-align: center ;
   font-size: 1cm;
   color: aliceblue;
   font-family: inherit;
   display: inline-block;
-}
-header{ 
+ }
+header{
   padding-left: 13cm;  
   margin-top: -0.5cm;
   background-color:#00704A ;
   margin-right:-35.70cm ;
-  border-bottom-style: groove;
 }
-Main{
+main{
+  border-bottom-style: groove;
   background-color: beige;
   margin-top: -1cm;
   margin-right:-35.60cm ;
@@ -26,9 +26,6 @@ Main{
 #palabras{
   display: inline-block;                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                           ;
   font-size: larger;  
-}
-
-h2{
   text-align: center;
   ;
 }

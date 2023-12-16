@@ -16,14 +16,18 @@ const TuComponente = (() => {
    }}catch(error){
         console.error('Error al hacer solicitud', error.message)
    }
+   fetchData()
 }, [])
+console.log(data)
   return (
     <div>
       {data && (
         <ul>
           
             {data.map((item) => {
-              <li key={item.id}>item</li>
+              <><li key={item.id}>item.titulo</li>
+              <li key={item.id} item>item.img</li></>
+
             })}
           
         </ul>
