@@ -8,28 +8,31 @@ const TuComponente = (() => {
   const { data, setData } = useState(null)
   const api = productos
 
-  useEffect(() => {
-    try {
-     const fetchData= async() =>{
+ 
+       const fetchData= async() =>{
+        try{
     const response = await axios.get(api)
     setData(response.data)
-   }}catch(error){
+   }catch(error){
         console.error('Error al hacer solicitud', error.message)
    }
-   fetchData()
+  }
+  useEffect (()=>{
+  fetchData() 
 }, [])
+
 console.log(data)
   return (
     <div>
       {data && (
         <ul>
-          
-            {data.map((item) => {
-              <><li key={item.id}>item.titulo</li>
+
+          {data.map((item) => {
+            <><li key={item.id}>item.titulo</li>
               <li key={item.id} item>item.img</li></>
 
-            })}
-          
+          })}
+
         </ul>
       )}
     </div>
